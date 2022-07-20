@@ -24,3 +24,9 @@ function lastElement(myArray) {
     }
     return null;
 }
+
+function capitalize(str) {
+    let firstIndex = str.substring(0, 1)
+    let restOfWord = str.substring(1)
+    return firstIndex.toUpperCase() + restOfWord;
+}
