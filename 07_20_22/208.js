@@ -30,3 +30,11 @@ function capitalize(str) {
     let restOfWord = str.substring(1)
     return firstIndex.toUpperCase() + restOfWord;
 }
+
+function sumArray(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += parseInt(array[i]);
+    }
+    return sum;
+}
