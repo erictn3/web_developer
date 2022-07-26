@@ -6,7 +6,7 @@ const myMath = {
         return num * num;
 
     },
-    cube: function (num) {
+    cube(num) {
         return num ** 3;
     }
 }
