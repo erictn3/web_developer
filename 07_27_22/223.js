@@ -13,3 +13,7 @@ const square = (x) => {
 const rollDie = () => {
     return Math.floor(Math.random() * 6) + 1;
 }
+
+const greet = (name) => {
+    return `Hey ${name}!`
+}
