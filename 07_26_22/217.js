@@ -16,8 +16,6 @@ const cat = {
     }
 }
 
-
-
 // key word THIS refers to object
 
 const meow2 = cat.meow;
