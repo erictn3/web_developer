@@ -6,4 +6,4 @@ Math.max(...nums)
 
 console.log(...'hello');
 
-// h e l l o
+// h e l l o   
