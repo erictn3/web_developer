@@ -4,4 +4,6 @@ const highScore = scores[0];
 
 const secondHighScore = scores[1];
 
-const [gold, silver, bronze] = scores;
+const [gold, silver, bronze, ...participation] = scores;
+
+
