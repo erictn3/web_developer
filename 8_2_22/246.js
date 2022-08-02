@@ -20,3 +20,5 @@ document.querySelector('h1').innerText = '<i>asdfasdf<i>'
 
 document.querySelector('h1').innerHTML = '<i>asdfasdf<i>'
 // we see the html elements included with the text
+
+document.querySelector('span').innerHTML = 'Disgusting';
