@@ -18,3 +18,21 @@ btn3.addEventListener('click', function () {
 
 })
 
+function twist() {
+    console.log('TWIST')
+}
+
+function twist() {
+    console.log('SHOUT')
+}
+
+const tasButton = document.querySelector('tas');
+
+tasButton.onclick = twist;
+tasButton.onclick = shout;
+
+tasButton.addEventListener('click', twist)
+
+tasButton.addEventListener('click', shout)
+
+
