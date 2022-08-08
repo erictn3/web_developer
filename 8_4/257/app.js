@@ -22,7 +22,7 @@ function twist() {
     console.log('TWIST')
 }
 
-function twist() {
+function shout() {
     console.log('SHOUT')
 }
 
