@@ -7,6 +7,8 @@ input.addEventListener('input', function (e) {
 
     if (input.value === '') {
         h1.innerText = 'Enter Your Username'
+    } else {
+        h1.innerText = `Welcome, ${addName}`;
     }
-    h1.innerText = `Welcome, ${addName}`;
+
 })
