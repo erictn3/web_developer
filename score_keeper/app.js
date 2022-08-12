@@ -17,7 +17,6 @@ let winningScore = 5;
 let isGameOver = false;
 
 function updateScores(player, opponent) {
-
     if (!isGameOver) {
         player.count += 1;
         if (player.count === winningScore) {
