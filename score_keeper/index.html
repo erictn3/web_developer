@@ -18,24 +18,53 @@
             color: red;
         }
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 
 <body>
-    <p>ping pong score keeper</p>
-    <h1><span id="p1Score">0</span> to <span id="p2Score">0</span></h1>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Ping Pong Score Keeper
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <h1 class=""><span id="p1Score">0</span> to <span id="p2Score">0</span></h1>
+                                <p class="subtitle">Use the buttons below to keep score</p>
 
-    <p>use the buttons below to keep score</p>
-    <select name="" id="playTo">
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-    </select>
+                                <label for="playto" class="label is-large is-inline">Playing To</label>
+                                <div class="is-rounded">
+                                    <select name="" id="playTo">
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <button id="p1Button" class="is-primary button card-footer-item">+1 player
+                                one</button>
+                            <button id="p2Button" class="is-info button card-footer-item">+1 player
+                                two</button>
+                            <button id="reset" class="is-danger button card-footer-item">reset</button>
 
-    <button id="p1Button">+1 player one</button>
-    <button id="p2Button">+2 player two</button>
-    <button id="reset">reset</button>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
 
     <script src="app.js"></script>
 </body>
