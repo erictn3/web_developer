@@ -22,8 +22,12 @@ const login = async (username, password) => {
     throw 'invalid password'
 }
 
-login('asdfdf')
+login('asdfdf', 'corgifeet')
     .then(msg => {
         console.log('logged in')
         console.log(msg)
+    })
+    .catch(err => {
+        console.log('error')
+        console.log(err);
     })
