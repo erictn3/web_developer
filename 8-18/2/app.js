@@ -13,12 +13,16 @@ const fakeRequest = (url) => {
 }
 
 async function makeTwoRequests() {
-    let data1 = await fakeRequest('/page1');
-    console.log('hellooo');
+    try {
+        let data1 = await fakeRequest('/page1');
+        console.log(data1);
+        let data2 = await fakeRequest('/page2');
+        console.log(data2);
+    } catch (e) {
+        console.log('caught an error')
+        console.log('error is', e)
 
-}
-try {
-    asdfd.log('asdf');
-} catch (e) {
-    console.log('its okay')
+    }
+
+
 }
