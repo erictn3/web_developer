@@ -17,4 +17,14 @@ async function rainbow() {
     await delayedColorChange('orange', 1000)
     await delayedColorChange('blue', 1000)
     await delayedColorChange('purple', 1000)
+    return 'all done'
 }
+
+rainbow().then(() => console.log("End of rainbow"));
+
+async function printRainbow() {
+    await rainbow();
+    console.log('end of rainbow');
+}
+
+printRainbow();
