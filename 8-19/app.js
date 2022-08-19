@@ -5,7 +5,7 @@ const req = new XMLHttpRequest();
 req.onload = function () {
     console.log('it loaded')
     const data = JSON.parse(this.responseText);
-    console.log(data)
+    console.log(data.name, data.gender, data.mass)
 }
 
 req.onerror = function () {
