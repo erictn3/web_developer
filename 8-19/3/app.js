@@ -16,18 +16,27 @@
 // }
 // getStarWarsPerson(4);
 
-const jokes = document.querySelector('#joke')
+const jokes = document.querySelector('#joke');
+const button = document.querySelector('button');
+
+
+const addNewJoke = async () => {
+    const jokeText = await dadJoke()
+    const newLI = document.createElement('LI');
+
+    newLI.append(jokeText);
+    jokes.append(newLI);
+}
 
 const dadJoke = async () => {
     const config = { headers: { Accept: 'application/json' } }
     try {
         const res = await axios.get('https://icanhazdadjoke.com/', config);
-        console.log(res.data.joke);
-        const newLI = document.createElement('LI');
+        return res.data.joke
 
-        newLI.append(res.data.joke);
-        jokes.append(newLI);
     } catch (e) {
         console.log(e);
     }
 }
+
+button.addEventListener('click', addNewJoke);
