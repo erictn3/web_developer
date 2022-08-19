@@ -15,3 +15,13 @@ const getStarWarsPerson = async (id) => {
     }
 }
 getStarWarsPerson(4);
+
+const dadJoke = async () => {
+    const config = { headers: { Accept: 'application/json' } }
+    try {
+        const res = await axios.get('https://icanhazdadjoke.com/', config);
+        console.log(res.data);
+    } catch (e) {
+        console.log(e);
+    }
+}
