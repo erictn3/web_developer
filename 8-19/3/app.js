@@ -7,7 +7,11 @@
 //     })
 
 const getStarWarsPerson = async (id) => {
-    const res = await axios.get(`https://swapi.dev/api/people/${id}`);
-    console.log(res.data);
+    try {
+        const res = await axios.get(`https://swapi.dev/api/people/${id}`);
+        console.log(res.data);
+    } catch (e) {
+        console.log(e)
+    }
 }
 getStarWarsPerson(4);
