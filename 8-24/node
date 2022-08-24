@@ -12,3 +12,10 @@ a Javascript runtime
     - drone software
 
 <!-- control -c twice to exit -->
+<!-- node REPL : read evaluate repeat loop -->
+
+<!-- type node to get into node environment-->
+.help for more information
+
+still has strings and numbers
+- but no document, api, dom
