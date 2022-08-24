@@ -10,3 +10,9 @@
 // ls shows current files in directory
 
 // cd moves forward or backwards into directories
+
+// ls = list directory contents
+// ls -l = list of contents with additional information (date created)
+
+// ls -a = list of file contents
+// ls -la = list of ALL file contents
