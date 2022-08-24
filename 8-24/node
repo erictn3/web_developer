@@ -19,3 +19,6 @@ a Javascript runtime
 
 still has strings and numbers
 - but no document, api, dom
+
+- window is called global in terminal (top level)
+- also have console.log, setTimeout
