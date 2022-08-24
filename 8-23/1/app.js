@@ -16,3 +16,11 @@
 
 // ls -a = list of file contents
 // ls -la = list of ALL file contents
+
+// touch utility sets the modification and access times of existing files
+    // touch  app.css will change access time from original to current
+
+// rm = remove file - does not go to trash can it's permanently gone
+// rmdir = remove directory only on empty folders
+// rm -rf = remove directories even if they have files
+    // rf = recursive force (remove nested files in every hierarchy level)
