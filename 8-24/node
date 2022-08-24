@@ -1,0 +1,14 @@
+what is node? 
+a Javascript runtime
+
+- node is an implementation of javascript outside the browser
+    - javascript outside the browser
+
+- node creates:
+    - web servers
+    - command line tools
+    - native apps (vscode is anode app)
+    - video games
+    - drone software
+
+<!-- control -c twice to exit -->
