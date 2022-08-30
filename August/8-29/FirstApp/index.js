@@ -5,7 +5,8 @@ const app = express();
 // app.use - every time a new request hits our server we receive it and now we display that response
 app.use((req, res) => {
     console.log("We got a new request")
-    res.send('hello, we got your request, this is a response');
+    // res.send('hello, we got your request, this is a response');
+    res.send({ color: 'red' })
 })
 
 
