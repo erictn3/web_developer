@@ -14,7 +14,7 @@ const app = express();
 // routes are sent in order by the order of operation like get, post, put
 
 app.get('/', (req, res) => {
-    res.send('this is the home page');
+    res.send('this is the home page!!!');
 });
 
 app.get('/r/:subreddit/:postId', (req, res) => {
