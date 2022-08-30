@@ -11,16 +11,22 @@ const app = express();
 
 // http request get only one response
 
+// routes are sent in order by the order of operation like get, post, put
+
 app.get('/', (req, res) => {
     res.send('this is the home page');
 });
+
+app.get('/r/:subreddit/:postId', (req, res) => {
+    const { subreddit, postId } = req.params
+    res.send(`<h1>Viewing Post ID:${postId} the ${subreddit} subreddit</h1>`)
+})
 
 app.post('/cats', (req, res) => {
     res.send('POST REQUEST TO /cats!!! THIS IS DIFFERENT THAN A GET REQUEST')
 })
 
 app.get('/cats', (req, res) => {
-
     res.send('meow')
 })
 
@@ -34,6 +40,8 @@ app.get('*', (req, res) => {
 
 // request is an object created by express based upon the incoming HTTP request
 
+
+// /r/SOMETHINGHERE
 // /cats => 'meow'
 // /dogs => 'woof'
 // '/' 
