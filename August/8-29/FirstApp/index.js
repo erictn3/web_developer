@@ -34,9 +34,18 @@ app.get('/dogs', (req, res) => {
     res.send('woof');
 })
 
+app.get('/search', (req, res) => {
+    const { q } = req.query;
+    if (!q) {
+        res.send('Nothing found if nothing searched')
+    }
+    res.send(`<h1>Search results for: ${q}</h1>`);
+})
 app.get('*', (req, res) => {
     res.send('I dont know')
 })
+
+
 
 // request is an object created by express based upon the incoming HTTP request
 
