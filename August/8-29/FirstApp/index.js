@@ -3,8 +3,9 @@ const express = require('express');
 const app = express();
 
 // app.use - every time a new request hits our server we receive it and now we display that response
-app.use(() => {
+app.use((req, res) => {
     console.log("We got a new request")
+    res.send('hello, we got your request, this is a response');
 })
 
 
@@ -13,3 +14,5 @@ app.listen(3000, () => {
 })
 
 // cannot get / means there IS a server but NO RESPONSE
+
+// http request is not a js object, it's text information 
