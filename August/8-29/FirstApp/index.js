@@ -13,6 +13,10 @@ const app = express();
 
 app.get('/', (req, res) => {
     res.send('this is the home page');
+});
+
+app.post('/cats', (req, res) => {
+    res.send('POST REQUEST TO /cats!!! THIS IS DIFFERENT THAN A GET REQUEST')
 })
 
 app.get('/cats', (req, res) => {
@@ -22,6 +26,10 @@ app.get('/cats', (req, res) => {
 
 app.get('/dogs', (req, res) => {
     res.send('woof');
+})
+
+app.get('*', (req, res) => {
+    res.send('I dont know')
 })
 
 // request is an object created by express based upon the incoming HTTP request
