@@ -11,9 +11,15 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+app.get('/r/:subreddit', (req, res) => {
+    const { subreddit } = req.params;
+    res.render('subreddit', { subreddit })
+})
+
 app.get('/rand', (req, res) => {
     const num = Math.floor(Math.random() * 10) + 1;
     res.render('random', { rand: num })
+    // does not matter what you name your key/object
 })
 
 app.listen(3000, () => {
