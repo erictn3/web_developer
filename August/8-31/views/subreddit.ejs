@@ -27,6 +27,10 @@
                         <%= post.author %>
                     </b>
             </p>
+
+            <% if(post.img) { %>
+                <img src="<%-post.img %> " alt="">
+                <% } %>
         </article>
         <% } %>
 
