@@ -26,41 +26,48 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="/rand">Random</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="/r/chickens">Chickens</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="/r/soccer">Soccer</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/r/mightyharvest">Mighty Harvest</a>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </nav>
 
+    <div class="container">
 
-    <h1>Browsing The <%= name %> subreddit</h1>
-    <h2>
-        <%= description %>
-    </h2>
-    <p>
-        <%=subscribers %> Total Subscribers
-    </p>
-    <hr>
+        <h1>Browsing The <%= name %> subreddit</h1>
+        <h2>
+            <%= description %>
+        </h2>
+        <p>
+            <%=subscribers %> Total Subscribers
+        </p>
+        <hr>
 
-    <% for(let post of posts) { %>
-        <article>
-            <p>
-                <%= post.title %> - <b>
-                        <%=post.author %>
-                    </b>
-            </p>
-            <% if(post.img) { %>
-                <img src="<%= post.img %>" alt="">
-                <% } %>
-        </article>
-        <% } %>
+        <% for(let post of posts) { %>
+            <article>
+                <p>
+                    <%= post.title %> - <b>
+                            <%=post.author %>
+                        </b>
+                </p>
+                <% if(post.img) { %>
+                    <img src="<%= post.img %>" alt="">
+                    <% } %>
+            </article>
+            <% } %>
+    </div>
+
 </body>
 
 </html>
