@@ -10,7 +10,7 @@
 
 <body>
     <h1>Make a new comment</h1>
-    <form action="">
+    <form action="/comments" method="post">
         <section>
             <label for="username">Enter Username:</label>
             <input type="text" id="username" placeholder="username" name="username">
@@ -18,7 +18,7 @@
         <section>
             <label for="comment">Comment Text</label>
             <br>
-            <textarea name="" id="comment" cols="35" rows="5"></textarea>
+            <textarea id="comment" cols="35" rows="5" name="comment"></textarea>
         </section>
         <button>Submit</button>
     </form>

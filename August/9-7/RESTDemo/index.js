@@ -36,6 +36,11 @@ app.get('/comments/new', (req, res) => {
     res.render('comments/new');
 })
 
+app.post('/comments', (req, res) => {
+    console.log(req.body)
+    res.send('IT WORKED');
+})
+
 app.get('/tacos', (req, res) => {
     res.send('GET /tacos response')
 })
