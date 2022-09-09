@@ -48,16 +48,22 @@ app.post('/comments', (req, res) => {
     res.redirect('/comments')
 })
 
+
 app.get('/comments/:id', (req, res) => {
     const { id } = req.params;
     const comment = comments.find(c => c.id === id)
     res.render('comments/show', { comment })
 })
 
+app.get('/comments/:id/edit', (req, res) => {
+    const { id } = req.params;
+    const comment = comments.find(c => c.id === id)
+    res.render('comments/edit', { comment })
+})
+
 app.patch('/comments/:id', (req, res) => {
     const { id } = req.params;
     const newCommentText = req.body.comment;
-    res.send('all good now')
     const foundComment = comments.find(c => c.id === id);
     foundComment.comment = newCommentText;
     res.redirect('/comments')
