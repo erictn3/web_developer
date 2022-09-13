@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1,
+        "author": "Colt",
+        "text": "papapopo",
+        "comments": [
+            "asdfased",
+            "test",
+            "yup"
+        ]
+    },
+    {
+        "id": 2,
+        "author": "Dave",
+        "text": "got em",
+        "comments": [
+            "asdfased"
+        ],
+        "asdfasd": "asdfasdf"
+    }
+]
