@@ -19,3 +19,10 @@ test> db.dogs.find()
     catFriendly: true
   }
 ]
+
+
+db.dogs.insert([{name: "Mochi", breed: "Maltese", age: 15, catFriendly: false}, {name: "Shade", breed: "Chihuahua", age: 7, catFriendly: true}])
+
+db.dogs.find()
+
+db.cats.insert({name: "blue steele", age: 5, dogFriendly: false, breed: "scottish"})
