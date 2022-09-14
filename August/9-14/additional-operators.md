@@ -15,3 +15,4 @@ db.dogs.find({breed: {$in ['Mutt', 'Corgi']}, {age: $lt:10}})
 
 db.dogs.find({breed: {$nin ['Mutt', 'Corgi']}})
 
+db.dogs.find({$or: [{'personality.catFriendly': true}, {age: {$lte: 2} } ] } )
