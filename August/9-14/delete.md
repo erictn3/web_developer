@@ -4,3 +4,4 @@ db.dogs.deleteMany({isAvailable: true})
 
 db.dogs.deleteMany({})
 <!-- deletes all -->
+
