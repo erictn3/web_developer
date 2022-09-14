@@ -58,3 +58,23 @@ test> db.dogs.find({name: 'Charlie'})
     catFriendly: true
   }
 ]
+
+test> db.dogs.updateOne({name: 'Charlie'}, {$set: {color: 'chocolate'}})      
+{                                                                             
+  acknowledged: true,                                                         
+  insertedId: null,                                                           
+  matchedCount: 1,                                                            
+  modifiedCount: 1,                                                           
+  upsertedCount: 0                                                            
+}                                                                             
+test> db.dogs.find({name: 'Charlie'})                                         
+[                                                                             
+  {                                                                           
+    _id: ObjectId("632257e7e358dd863b62d108"),                                
+    name: 'Charlie',                                                          
+    age: 4,                                                                   
+    breed: 'corgi',                                                           
+    catFriendly: true,                                                        
+    color: 'chocolate'                                                        
+  }                                                                           
+]                                                                             
