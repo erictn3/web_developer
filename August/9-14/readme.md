@@ -78,3 +78,55 @@ test> db.dogs.find({name: 'Charlie'})
     color: 'chocolate'                                                        
   }                                                                           
 ]                                                                             
+
+
+]
+test> db.dogs.updateMany({catFriendly: true}, {$set: {isAvailable: false}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+test> db.dogs.find()
+[
+  {
+    _id: ObjectId("632257e7e358dd863b62d108"),
+    name: 'Charlie',
+    age: 4,
+    breed: 'corgi',
+    catFriendly: true,
+    color: 'chocolate',
+    isAvailable: false
+  },
+  {
+    _id: ObjectId("63225909e358dd863b62d109"),
+    name: 'Mochi',
+    breed: 'Maltese',
+    age: 15,
+    catFriendly: false
+  },
+  {
+    _id: ObjectId("63225909e358dd863b62d10a"),
+    name: 'Shade',
+    breed: 'Chihuahua',
+    age: 7,
+    catFriendly: true,
+    isAvailable: false
+  }
+]
+
+ db.cats.updateOne({age: 6}, {$set: {age: 7}, $currentDate: {lastChanged: true}})
+
+ [
+  {
+    _id: ObjectId("63225974e358dd863b62d10b"),
+    name: 'blue steele',
+    age: 7,
+    dogFriendly: false,
+    breed: 'scottish',
+    lastChanged: ISODate("2022-09-14T23:15:09.548Z")
+  }
+]
+
