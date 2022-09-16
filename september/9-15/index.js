@@ -46,3 +46,6 @@ const Movie = mongoose.model('Movie', movieSchema);
 // Movie.findById('3236aed9cd42e1a20b29aa7').then(m => console.log(m))
 
 // Movie.updateOne({title: "Amadeus"}, {year: 1984}).then(res => console.log(res))
+// db.movies.find({title: {$in: ['Amadeus', 'Stand By Me']}})
+
+// Movie.updateMany({title: {$in: ['Amadeus', 'Stand By Me']}}, {score: 10}).then(res => console.log(res))
