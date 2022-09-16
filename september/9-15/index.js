@@ -51,3 +51,5 @@ const Movie = mongoose.model('Movie', movieSchema);
 // Movie.updateMany({title: {$in: ['Amadeus', 'Stand By Me']}}, {score: 10}).then(res => console.log(res));
 
 // Movie.findOneAndUpdate({title: 'The Iron Giant'}, {score: 7.8}, {new: true}).then(m => console.log(m))
+
+// Movie.remove({title: 'Amelie'}).then(msg => console.log(msg))
