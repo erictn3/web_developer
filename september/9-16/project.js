@@ -18,11 +18,15 @@ const productSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    onSale: {
+        type: Boolean,
+        default: false
+    }
 });
 
 const Product = mongoose.model('Product', productSchema);
 
-const bike = new Product({ name: "Mountain Bike", price: 999, color: 'red' });
+const bike = new Product({ name: "Bike Helmet", price: 2000 });
 
 bike.save()
     .then(data => {
