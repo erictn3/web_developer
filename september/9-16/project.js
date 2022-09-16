@@ -15,13 +15,14 @@ const productSchema = new mongoose.Schema({
         required: true
     },
     price: {
-        type: Number
+        type: Number,
+        required: true
     },
 });
 
 const Product = mongoose.model('Product', productSchema);
 
-const bike = new Product({ name: "Mountain Bike", price: 'hello!' });
+const bike = new Product({ name: "Mountain Bike", price: 999, color: 'red' });
 
 bike.save()
     .then(data => {
