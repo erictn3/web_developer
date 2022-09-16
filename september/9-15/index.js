@@ -44,3 +44,5 @@ const Movie = mongoose.model('Movie', movieSchema);
 
 // Movie.find({_id: '3236aed9cd42e1a20b29aa7'}).then(m => console.log(m))
 // Movie.findById('3236aed9cd42e1a20b29aa7').then(m => console.log(m))
+
+// Movie.updateOne({title: "Amadeus"}, {year: 1984}).then(res => console.log(res))
