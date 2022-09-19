@@ -12,7 +12,8 @@ mongoose.connect('mongodb://localhost:27017/shopApp')
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        maxLength: 20
     },
     price: {
         type: Number,
@@ -26,7 +27,7 @@ const productSchema = new mongoose.Schema({
 
 const Product = mongoose.model('Product', productSchema);
 
-const bike = new Product({ name: "Bike Helmet", price: 2000 });
+const bike = new Product({ name: "Bike Helmet from helmet makers", price: 2000 });
 
 bike.save()
     .then(data => {

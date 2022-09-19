@@ -53,3 +53,4 @@ const Movie = mongoose.model('Movie', movieSchema);
 // Movie.findOneAndUpdate({title: 'The Iron Giant'}, {score: 7.8}, {new: true}).then(m => console.log(m))
 
 // Movie.remove({title: 'Amelie'}).then(msg => console.log(msg))
+// Movie.deleteMany({year: {$gte: 1999}}).then(msg => console.log(msg))
