@@ -18,7 +18,7 @@ const productSchema = new mongoose.Schema({
     price: {
         type: Number,
         required: true,
-        min: 0
+        min: [0, 'Price must be positive']
     },
     onSale: {
         type: Boolean,
@@ -38,24 +38,18 @@ const productSchema = new mongoose.Schema({
             type: Number,
             default: 0
         }
+    },
+    size: {
+        type: String,
+        enum: ['S', 'M', 'L']
     }
 });
 
 const Product = mongoose.model('Product', productSchema);
 
-// const bike = new Product({ name: "Tire Pump", price: 20, categories: ['cycling'] });
+const bike = new Product({ name: "Cycling Jersey", price: 28, categories: ['cycling'], size: 'S' });
 
-// bike.save()
-//     .then(data => {
-//         console.log('IT WORKED')
-//         console.log(data)
-//     })
-//     .catch(err => {
-//         console.log('OH NO ERROR')
-//         console.log(err)
-//     })
-
-Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -19.99 }, { new: true, runValidators: true })
+bike.save()
     .then(data => {
         console.log('IT WORKED')
         console.log(data)
@@ -64,3 +58,13 @@ Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -19.99 }, { new: true, 
         console.log('OH NO ERROR')
         console.log(err)
     })
+
+// Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: 9 }, { new: true, runValidators: true })
+//     .then(data => {
+//         console.log('IT WORKED')
+//         console.log(data)
+//     })
+//     .catch(err => {
+//         console.log('OH NO ERROR')
+//         console.log(err)
+//     })
