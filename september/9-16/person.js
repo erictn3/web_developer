@@ -11,7 +11,7 @@ mongoose.connect('mongodb://localhost:27017/shopApp')
 
 const personSchema = new mongoose.Schema({
     first: String,
-    Last: String
+    last: String
 })
 
 personSchema.virtual('fullName').get(function () {
