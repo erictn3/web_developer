@@ -20,8 +20,7 @@ app.set('view engine', 'ejs');
 
 app.get('/products', async (req, res) => {
     const products = await Product.find({})
-    console.log(products)
-    res.render('products/index')
+    res.render('products/index', { products })
 })
 
 app.listen(3000, () => {
