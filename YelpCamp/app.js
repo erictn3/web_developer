@@ -29,6 +29,10 @@ app.get('/campgrounds', async (req, res) => {
     res.render('campgrounds/index', { campgrounds })
 })
 
+app.get('/campgrounds/:id', async (req, res) => {
+    res.render('campgrounds/show');
+})
+
 // app.get('/makecampground', async (req, res) => {
 //     const camp = new Campground({ title: 'My Backyard', price: 20, description: 'cheap camping!' })
 //     await camp.save();
