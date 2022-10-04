@@ -10,6 +10,11 @@ app.use((req, res, next) => {
     next();
 })
 
+app.use('/dogs', (req, res, next) => {
+    console.log('I love dogs!')
+    next();
+})
+
 // this function works on every single request
 // app.use((req, res, next) => {
 //     console.log("THIS IS MY FIRST MIDDLEWARE")
