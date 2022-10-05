@@ -15,6 +15,14 @@ app.use('/dogs', (req, res, next) => {
     next();
 })
 
+app.use((req, res, next) => {
+    const { password } = (req.query);
+    if (password === 'chicken') {
+        next();
+    }
+    res.send('SORRY WRONG PASSWORD')
+})
+
 // this function works on every single request
 // app.use((req, res, next) => {
 //     console.log("THIS IS MY FIRST MIDDLEWARE")
@@ -38,6 +46,8 @@ app.get('/dogs', (req, res) => {
     console.log(`REQUEST DATE: ${req.requestTime}`)
     res.send('WOOF WOOF!')
 })
+
+
 
 app.use((req, res) => {
     res.status(404).send('NOT FOUND!');
