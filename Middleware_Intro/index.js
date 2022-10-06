@@ -47,6 +47,9 @@ app.get('/dogs', (req, res) => {
     res.send('WOOF WOOF!')
 })
 
+app.get('/secret', (req, res) => {
+    res.send('my secret is: sometimes i wear headphones in public so I dont talk to anyone')
+})
 
 
 app.use((req, res) => {
