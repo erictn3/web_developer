@@ -11,12 +11,10 @@ db.once("open", () => {
     console.log("Database connected");
 });
 
-const sample = (array) => array[Math.floor(Math.random() * array.length)]
+const sample = array => array[Math.floor(Math.random() * array.length)];
 
 const seedDB = async () => {
-    await Campground.deleteMany({})
-    const c = new Campground({ title: 'purple field' });
-    await c.save();
+    await Campground.deleteMany({});
     for (let i = 0; i < 50; i++) {
         const random1000 = Math.floor(Math.random() * 1000);
         const price = Math.floor(Math.random() * 20) + 10;
@@ -24,8 +22,9 @@ const seedDB = async () => {
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
             image: 'https://source.unsplash.com/collection/483251',
-            description: "this is the description my good sir this is the description my good sirthis is the description my good sirthis is the description my good sir",
+            description: 'this is the description my good sir this is the description my good sirthis is the description my good sirthis is the description my good sir',
             price
+
         })
         await camp.save();
     }
