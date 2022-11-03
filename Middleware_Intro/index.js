@@ -23,20 +23,6 @@ const verifyPassword = ((req, res, next) => {
     res.send('SORRY WRONG PASSWORD')
 })
 
-// this function works on every single request
-// app.use((req, res, next) => {
-//     console.log("THIS IS MY FIRST MIDDLEWARE")
-
-//     next();
-//     console.log("THIS IS MY FIRST MIDDLEWARE - AFTER CALLING NEXT()")
-
-// })
-
-// app.use((req, res, next) => {
-//     console.log("THIS IS MY SECOND MIDDLEWARE")
-//     next();
-// })
-
 app.get('/', (req, res) => {
     console.log(`REQUEST DATE: ${req.requestTime}`)
     res.send('Home Page')
@@ -59,3 +45,16 @@ app.use((req, res) => {
 app.listen(3000, () => {
     console.log('App is running on localhost: 3000')
 })
+// this function works on every single request
+// app.use((req, res, next) => {
+//     console.log("THIS IS MY FIRST MIDDLEWARE")
+
+//     next();
+//     console.log("THIS IS MY FIRST MIDDLEWARE - AFTER CALLING NEXT()")
+
+// })
+
+// app.use((req, res, next) => {
+//     console.log("THIS IS MY SECOND MIDDLEWARE")
+//     next();
+// })
