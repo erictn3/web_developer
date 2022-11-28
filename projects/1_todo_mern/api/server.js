@@ -28,5 +28,12 @@ db.once("open", () => {
     console.log("Database connected");
 });
 
+const Todo = require('./models/Todo');
+
+app.get('/todos', async (req, res) => {
+    const todos = await Todo.find();
+    res.json(todo);
+})
+
 
 app.listen(3001, () => console.log("Server Started on port 3001"));
