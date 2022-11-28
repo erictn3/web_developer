@@ -32,8 +32,17 @@ const Todo = require('./models/Todo');
 
 app.get('/todos', async (req, res) => {
     const todos = await Todo.find();
-    res.json(todo);
+    res.json(todos);
 })
 
+app.post('/todo/new', (req, res) => {
+    const todo = new Todo({
+        text: req.body.text
+    })
+
+    todo.save();
+
+    res.json(todo);
+})
 
 app.listen(3001, () => console.log("Server Started on port 3001"));
