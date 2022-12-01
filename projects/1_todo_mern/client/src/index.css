@@ -1,0 +1,12 @@
+:root {
+    --primary: #D91E5B;
+    --secondary: purple;
+    --light: #EEE;
+    --light-alt: #61759b;
+    --dark: #131A26;
+    --dark-alt: #202B3E;
+}
+
+* {
+    margin: 0;
+}
