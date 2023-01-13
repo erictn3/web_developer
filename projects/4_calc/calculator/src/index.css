@@ -21,6 +21,7 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
+  padding: 16px;
 }
 
 .calculator {
@@ -54,7 +55,7 @@ button {
   font-size: 20px;
   padding: 16px;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0s;
 }
 
 button:hover {
